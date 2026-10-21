@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{%block contents%}
+
+<section id="intro" class="clearfix">
+    <div class="intro-text">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--<div class="container d-flex h-100">
+    <div class="row justify-content-center align-self-center">-->
+      <!--<div class="col-md-6 intro-info order-md-first order-last">-->
+          <p><h2>Doctor Login</h2></p>
+          <form action="/doctorlogincheck/" method="POST">
+              {% csrf_token %}
+              <table align="center">
+                      <!--<td><input  type="text" name="uname" placeholder="student Login" ><br/><br/></td>-->
+                      Email ID <input type="email" name="email"  placeholder="Email"><br><br>
+                      Password <input  type="password" name="upasswd" placeholder="Password" >
+                      <br><br>
+              </table>
+              <input type="submit" class="btn btn-outline-success my-2 my-sm-0" style="color:Green" value="Login"><br/>
+              <br>New Doctor Register Here ?<a href="{% url 'doctorregistrationaction' %}" style="color:white">Click Here</a>
+          </form> </h2>
+                          {% if messages %}
+                              {% for message in messages %}
+                                  <font color='GREEN'> {{ message }}</font>
+                              {% endfor %}
+                          {% endif %}
+
+       
+      </div>
+    </div>
+
+  </div>
+</section>
+{%endblock%}

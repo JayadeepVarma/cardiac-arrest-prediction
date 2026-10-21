@@ -1,0 +1,15 @@
+# Clean, pinned requirements - verified on Python 3.12 (Oct 2026 fix)
+# The original file listed ~60 unpinned package names (mostly TensorFlow
+# transitive deps). This is the set the code actually imports.
+Django==5.0.1
+django-pandas==0.6.6
+pandas==2.1.4
+numpy==1.26.4
+scikit-learn==1.4.2
+scipy==1.11.4
+matplotlib==3.6.3
+seaborn==0.13.2
+pillow==10.2.0
+# Only needed for the Neural Network section of the Machine Learning page:
+tensorflow==2.16.2
+keras==3.3.3

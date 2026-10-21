@@ -1,0 +1,21 @@
+{% extends 'userbase.html'%}
+{%block contents%}
+
+ <section id="intro">
+
+    <div class="intro-text">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p><u>Accuracy</u></p>
+        <table>
+          <tr align="left"><td><h3>Logistic regression : </h3></td><td><h3>{{score_lr}}% </h3></td></tr>
+          <tr align="left"><td><h3>Naive Bayes : </h3></td><td><h3>{{score_nb}}% </h3></td></tr>
+          <tr align="left"><td><h3>SVM : </h3></td><td><h3>{{score_svm}}% </h3></td></tr>
+          <tr align="left"><td><h3>K-Nearest Neighbors : </h3></td><td><h3>{{score_knn}}% </h3></td></tr>
+          <tr align="left"><td><h3>Decision Tree : </h3></td><td><h3>{{score_dt}}% </h3></td></tr>
+          <tr align="left"><td><h3>Random Forest : </h3></td><td><h3>{{score_rf}}% </h3></td></tr>
+          <tr align="left"><td><h3>Neural Network : </h3></td><td><h3>{{score_nn}}% </h3></td></tr>
+        </table>
+      <!--<a href="#about" class="btn-get-started scrollto">Get Started</a>-->
+    </div>
+  </section>
+{%endblock%}

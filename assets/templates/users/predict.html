@@ -1,0 +1,36 @@
+{% extends 'userbase.html'%}
+{%block contents%}
+
+ <section id="intro">
+
+    <div class="intro-text">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+      <p><h2>Predictions</h2></p>
+       <form method="POST" action="{%url 'predictionss'%}" >
+        {% csrf_token %}
+           <table>
+                    <tr><td><label for="age">Age:</label></td><td><input type="text" id="age" name="age"></td><td>Age In Years </td> </tr>
+                    <tr><td><label for="sex">Sex:</label></td><td><input type="text" id="sex" name="sex"></td><td> 1= Male; 0=Female</td></tr>
+                    <tr><td><label for="cp">Chest pain type(cp):</label></td><td><input type="text" id="cp" name="cp"></td><td> 0: Typical Angina, 1: Atypical Angina, 2: Non-Anginal Pain, 3: Asymptomatic </td></tr>
+                    <tr><td><label for="trestbps">Resting Blood Pressure(trestbps):</label></td><td><input type="text" id="trestbps" name="trestbps"></td><td>in mm Hg on admission to the hospital </td></tr>
+                    <tr><td><label for="chol">Serum Cholestora(chol):</label></td><td><input type="text" id="chol" name="chol"></td><td>serum cholestoral in mg/dl </td></tr>
+                    <tr><td><label for="fbs">Fasting Blood Sugar(fbs):</label></td><td><input type="text" id="fbs" name="fbs"></td><td>(fasting blood sugar > 120 mg/dl) (1 = true; 0 = false) </td></tr>
+                    <tr><td><label for="restecg">Resting Electrocardiographic(restecg):</label></td><td><input type="text" id="restecg" name="restecg"></td><td> 0 : Normal ECG, 1 : Non-diagnostic ECG, 2 : Abnormal ECG </td></tr>
+                    <tr><td><label for="thalach">Maximum Heart Rate Achieved(thalach):</label></td><td><input type="text" id="thalach" name="thalach"></td><td> maximum heart rate achieved</td></tr>
+                    <tr><td><label for="exang">Exercise Induced Angina(exang):</label></td><td><input type="text" id="exang" name="exang"></td><td>exercise induced angina (1 = yes; 0 = no) </td></tr>
+                    <tr><td><label for="oldpeak">ST Depression Induced(oldpeak):</label></td><td><input type="text" id="oldpeak" name="oldpeak"></td><td>ST depression induced by exercise relative to rest </td></tr>
+                    <tr><td><label for="slope">The Slope of the Peak(slope):</label></td><td><input type="text" id="slope" name="slope"></td><td>The slope of the peak exercise ST segment Value 0: up-sloping 1: flat 2: down-sloping </td></tr>
+                    <tr><td><input type="submit" value="Submit"></td></tr>
+                        {% if messages %}
+                               {% for message in messages %}
+
+                                  <font color='GREEN'> {{ message }}</font>
+                               {% endfor %}
+                           {% endif %}
+
+                </table>
+
+            </form>  </p><a class="nav-link" href=""></a>
+    </div>
+  </section>
+{%endblock%}
